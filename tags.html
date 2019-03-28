@@ -1,0 +1,36 @@
+---
+layout: default
+title: "Tags"
+description: "Tag cloud from all the project"
+permalink: /tags/
+---
+
+<section>
+    {% for tag in site.tags  %}
+    <section>
+        <section class="anas_card mb-3 p-3 rounded">
+            <h3 class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+            <hr class="mx-n3"/>
+            {% assign pages_list = tag[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                <article>
+                    <header>
+                        <p class="text-muted small mb-1">
+                            📅 <time datetime="{{ post.date }}" class="date">{{ post.date | date: "%A, %-d %B %Y" }}</time>
+                        </p>
+                        <h1 class="h6 font-weight-normal mb-2">
+                            <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+                        </h1>
+                    </header>
+                </article>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+        </section>
+    </section>
+    {% endfor %}
+</section>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  
+  <body class="d-flex flex-column">
+    {% include header.html %}
+    <main class="flex-fill container py-3">
+      <section class="row">
+        <section class="col-12 col-md-7">
+        <article class="anas_card mb-3 p-3 rounded">
+
+          <section class="_body">
+            <header>
+              <h1 class="h3 mb-2">{{ page.title }}</h1>
+              <p class="small text-muted mb-2">📅 <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%A, %-d %B %Y" }}</time></p>
+            </header>
+            <hr class="mx-n3" />
+            <section id="post-content" class="text-word-break-word">
+              {{ content }}
+            </section>
+            <hr class="mx-n3"/>
+            <footer>
+              <nav>
+                {% for tag in page.tags %}
+                <a href="{{ 'tags/' | relative_url }}{{ tag | slugify | prepend: "#" }}" title="{{ tag | capitalize }}">🔖 {{ tag | capitalize }}</a>
+                {% endfor %}
+              </nav>
+            </footer>
+          </section>
+
+        </article>
+        {%if site.discus_identifier %}
+        <section class="anas_card mb-3 p-3 rounded">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            var disqus_shortname = '{{ site.discus_identifier }}';
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the comments</noscript>
+        </section>
+        {% endif %}
+      </section>
+      <aside class="col-12 offset-md-1 col-md-3 order-last order-md-first">
+        {% include profileside.html %}
+      </aside>
+    </section>
+  </main>
+  {% include footer.html %}
+  {% include script.html %}
+</body>
+
+</html>

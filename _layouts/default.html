@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+
+<body class="d-flex flex-column">
+  {% include header.html %}
+  <main class="flex-fill container py-3">
+    <section class="row">
+      <section class="col-12 col-md-7">
+        {{ content }}
+      </section>
+      <aside class="col-12 offset-md-1 col-md-3 order-last order-md-first">
+        {% include profileside.html %}
+      </aside>
+    </section>
+  </main>
+  {% include footer.html %}
+  {% include script.html %}
+</body>
+
+</html>
