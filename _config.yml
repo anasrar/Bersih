@@ -17,7 +17,7 @@ title: ☔ Bersih
 email: email@email.com
 description: Just Ordinary Jekyll Theme
 phone_number: XXXX - XXXX
-baseurl: "/Bersih" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 discus_identifier: disqus # Add your Disqus identifier
