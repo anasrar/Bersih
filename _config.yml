@@ -14,15 +14,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ☔ Bersih
-email: email@email.com
+email: mynameanasrar@gmail.com
 description: Just Ordinary Jekyll Theme
 phone_number: XXXX - XXXX
 baseurl: "/Bersih" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-discus_identifier: disqus # Add your Disqus identifier
-google_site_verification : "XXXXXXXXXXXXXXXXXXXXXX" # Add your Google Site Verification
-google_analytics: "UA-XXXXXXX-X" # Add your GA Tracking Id
+discus_identifier: anasrar # Add your Disqus identifier
+google_site_verification : "p2LcVEQMJMq_5jG4fS7Bh4K4x6s3pDjV_GUrkX8d4WU" # Add your Google Site Verification
+google_analytics: "UA-133576589-1" # Add your GA Tracking Id
 theme_color: "#007bff" # Meta theme-color
 
 paginate: 6
@@ -46,18 +46,18 @@ defaults:
     values:
       layout: "post"
       image : "/Bersih/assets/images/thumb.png" # Default Thumbnail
-      author: "XXXXXX" # Default Author Name On Post
+      author: "Anas RAR" # Default Author Name On Post
   -
     scope: # Default Front Matter For Global File
       path: ""
     values:
-      author: "XXXXXX"  # Default Author Name On Global File
+      author: "Anas RAR"  # Default Author Name On Global File
 
 social:
-  name: "XXXXXX"
+  name: "Anas RAR"
   links:
-    - https://github.com/XXXXXX
-    - https://codepen.io/XXXXXX
+    - https://github.com/anasrar
+    - https://codepen.io/anasrar
 
 exclude:
  - README.md

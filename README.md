@@ -9,7 +9,7 @@
 
 # Install
 
-Download [Releases](releases) or Clone This Repository
+Download [Releases](https://github.com/anasrar/Bersih/releases) or Clone This Repository
 ___
 Install Dependency
 ```
