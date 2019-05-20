@@ -119,3 +119,11 @@ a.hover-icon:hover {
 }
 
 @import "syntax-highlighter";
+
+#post-content {
+    @for $i from 1 through 6 {
+        .h#{$i},h#{$i} {
+          font-size: 1.75rem - ($i / 10);
+        }
+    }
+}
